@@ -103,3 +103,33 @@ button:hover {
         font-size: 0.9em;
     }
 }
+
+/* Additional reference styles */
+.timetable-cell {
+    min-height: 80px;
+    transition: all 0.2s ease;
+}
+.course-card {
+    touch-action: none;
+    user-select: none;
+}
+.course-card.dragging {
+    opacity: 0.8;
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+#vanta-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.schedule-card {
+    transition: all 0.2s ease;
+}
+.schedule-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}

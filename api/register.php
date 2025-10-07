@@ -1,5 +1,13 @@
 <?php
 header('Content-Type: application/json');
+
+// Only allow POST requests
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405); // Method Not Allowed
+    echo json_encode(['success' => false, 'message' => 'Only POST requests are allowed']);
+    exit;
+}
+
 require 'db.php';
 $data = json_decode(file_get_contents('php://input'), true);
 if (!isset($data['username'], $data['password'])) {

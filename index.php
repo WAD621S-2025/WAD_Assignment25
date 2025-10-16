@@ -17,14 +17,14 @@
   <nav class="bg-slate-900/80 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="flex items-center font-semibold text-lg text-indigo-400">
+        <a href="index.php" class="flex items-center font-semibold text-lg text-indigo-400">
           <i data-feather="calendar" class="h-6 w-6"></i>
           <span class="ml-2">UniTime</span>
         </a>
         <div class="hidden md:flex items-center space-x-2 text-sm font-medium" id="nav-links">
-          <a href="index.html" class="nav-link">Timetable</a>
-          <a href="schedules.html" class="nav-link">My Schedules</a>
-          <a href="account.html" class="nav-link">Account</a>
+          <a href="index.php" class="nav-link">Timetable</a>
+          <a href="schedules.php" class="nav-link">My Schedules</a>
+          <a href="account.php" class="nav-link">Account</a>
         </div>
         <div class="flex items-center" id="nav-auth">
           <button id="login-btn" class="btn-primary">Login</button>
@@ -39,7 +39,7 @@
       <p class="mt-4 text-lg text-slate-300">Drag, drop, and save timetables for every semester. UniTime keeps your weeks organised and in sync across devices.</p>
       <div class="mt-6 flex flex-wrap gap-3 justify-center">
         <button id="get-started" class="btn-primary">Start Building</button>
-        <a href="schedules.html" class="btn-secondary">View Saved Schedules</a>
+        <a href="schedules.php" class="btn-secondary">View Saved Schedules</a>
       </div>
     </section>
 
@@ -54,8 +54,8 @@
             <div class="flex flex-wrap gap-2 items-center">
               <input id="schedule-name" type="text" placeholder="Schedule name" class="input-dark w-44" />
               <button id="new-schedule-btn" class="btn-muted">New</button>
-              <button id="save-local-btn" class="btn-muted">Save Local</button>
-              <button id="load-local-btn" class="btn-muted">Load Local</button>
+                <button id="save-local-btn" type="button" class="btn-muted" onclick="saveLocalSchedule()">Save Local</button>
+                <button id="load-local-btn" type="button" class="btn-muted" onclick="loadLocalSchedule()">Load Local</button>
               <button id="save-server-btn" class="btn-primary">Save Cloud</button>
               <button id="load-server-btn" class="btn-glass">Sync Cloud</button>
             </div>

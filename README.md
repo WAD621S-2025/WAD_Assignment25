@@ -28,7 +28,7 @@ ALTER TABLE schedules
    - Deploy the `api/` folder to your PHP server.
 
 3. **Frontend**
-   - Open `index.html` in your browser.
+   - Open `index.php` in your browser.
 
 ## Features
 - Register/login

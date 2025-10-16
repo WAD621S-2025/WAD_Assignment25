@@ -1,7 +1,7 @@
 <?php
-// Database connection - edit these values to match your MySQL server
+// Database connection settings
 $host = '127.0.0.1';
-$port = 3307; // change if your MySQL uses a different port
+$port = 3307; 
 $db   = 'schedule_app';
 $user = 'root';
 $pass = '';

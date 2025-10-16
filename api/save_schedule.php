@@ -9,7 +9,7 @@ $user_id = (int)$data['user_id'];
 $name = trim($data['name']);
 $schedule_data = json_encode($data['data']);
 // Upsert: if schedule exists for user+name, update, else insert
-$stmt = $pdo->prepare('SELECT id FROM schedules WHERE user_id = ? AND name = ?');
+$stmt = $pdo->prepare('SELECT id FROM schedules WHERE user_id = ? AND title = ?');
 $stmt->execute([$user_id, $name]);
 $row = $stmt->fetch();
 if ($row) {
@@ -17,7 +17,7 @@ if ($row) {
     $stmt->execute([$schedule_data, $row['id']]);
     echo json_encode(['success'=>true,'message'=>'Schedule updated']);
 } else {
-    $stmt = $pdo->prepare('INSERT INTO schedules (user_id, name, data) VALUES (?, ?, ?)');
+    $stmt = $pdo->prepare('INSERT INTO schedules (user_id, title, data) VALUES (?, ?, ?)');
     $stmt->execute([$user_id, $name, $schedule_data]);
     echo json_encode(['success'=>true,'message'=>'Schedule saved']);
 }

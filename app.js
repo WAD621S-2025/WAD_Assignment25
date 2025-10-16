@@ -79,7 +79,7 @@ function highlightActiveNav() {
   const navLinks = document.querySelectorAll('#nav-links .nav-link');
   const page = getPage();
   const match = {
-    index: 'index.html',
+    index: 'index.php',
     schedules: 'schedules.html',
     account: 'account.html'
   };
@@ -292,7 +292,7 @@ function initBuilderPage() {
   const params = new URLSearchParams(window.location.search);
   if (params.has('loaded')) {
     notify(`Loaded ${decodeURIComponent(params.get('loaded'))} from cloud.`, 'success');
-    window.history.replaceState({}, document.title, 'index.html');
+    window.history.replaceState({}, document.title, 'index.php');
   }
 }
 
@@ -644,7 +644,7 @@ function renderSchedulesGrid(schedules) {
     const deleteBtn = card.querySelector('[data-action="delete"]');
     if (loadBtn) loadBtn.addEventListener('click', () => {
       localStorage.setItem(TIMETABLE_KEY, JSON.stringify({ name: schedule.name, data: schedule.data }));
-      window.location.href = `index.html?loaded=${encodeURIComponent(schedule.name)}`;
+      window.location.href = `index.php?loaded=${encodeURIComponent(schedule.name)}`;
     });
     if (downloadBtn) downloadBtn.addEventListener('click', () => downloadSchedule(schedule));
     if (deleteBtn) deleteBtn.addEventListener('click', () => confirmDeleteSchedule(schedule));

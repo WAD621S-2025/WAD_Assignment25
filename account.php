@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Schedules — UniTime</title>
+  <title>Account — UniTime</title>
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen" data-page="schedules">
+<body class="bg-slate-950 text-slate-100 min-h-screen" data-page="account">
   <div id="vanta-bg"></div>
 
   <nav class="bg-slate-900/80 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
@@ -23,8 +23,8 @@
         </a>
         <div class="hidden md:flex items-center space-x-2 text-sm font-medium" id="nav-links">
           <a href="index.php" class="nav-link">Timetable</a>
-          <a href="schedules.html" class="nav-link">My Schedules</a>
-          <a href="account.html" class="nav-link">Account</a>
+          <a href="schedules.php" class="nav-link">My Schedules</a>
+          <a href="account.php" class="nav-link">Account</a>
         </div>
         <div class="flex items-center" id="nav-auth">
           <button id="login-btn" class="btn-primary">Login</button>
@@ -34,31 +34,59 @@
   </nav>
 
   <main class="relative z-10">
-    <section class="max-w-4xl mx-auto px-6 py-12 text-center" data-aos="fade-up">
-      <h1 class="text-4xl md:text-5xl font-bold text-white">Your saved schedules, anywhere</h1>
-      <p class="mt-4 text-lg text-slate-300">Pick up where you left off. Download, duplicate, or load schedules into the builder with one click.</p>
+    <section class="max-w-3xl mx-auto px-6 py-12 text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold text-white">Your UniTime account</h1>
+      <p class="mt-4 text-lg text-slate-300">Update your password, review recent cloud activity, and control sign-in sessions.</p>
     </section>
 
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" data-aos="fade-up" data-aos-delay="100">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-        <div>
-          <h2 class="text-xl font-semibold text-white">Cloud Schedules</h2>
-          <p class="text-sm text-slate-300">Stored securely in your account. Select a schedule to load it into the builder.</p>
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-8" data-aos="fade-up" data-aos-delay="100">
+      <div class="bg-white/10 border border-white/10 rounded-3xl shadow-xl p-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-indigo-500/30 border border-indigo-400/40">
+              <i data-feather="user" class="h-6 w-6"></i>
+            </span>
+            <div class="text-left">
+              <p class="text-sm uppercase tracking-wide text-slate-400">Signed in as</p>
+              <p id="account-username" class="text-xl font-semibold text-white">Guest</p>
+            </div>
+          </div>
+          <button id="account-logout-btn" class="btn-secondary">Sign out</button>
         </div>
-        <div class="flex gap-2">
-          <button id="refresh-schedules-btn" class="btn-glass">
-            <i data-feather="refresh-ccw" class="h-4 w-4"></i>
-            Refresh
-          </button>
-          <a href="index.php" class="btn-secondary">Open Builder</a>
+        <p id="account-message" class="mt-4 text-sm text-slate-300">Sign in to manage your account settings.</p>
+      </div>
+
+      <div class="bg-white/10 border border-white/10 rounded-3xl shadow-xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-lg font-semibold text-white">Change password</h2>
+            <p class="text-sm text-slate-300">We require your current password to confirm any updates.</p>
+          </div>
         </div>
+        <form id="password-form" class="space-y-4">
+          <div>
+            <label for="current-password" class="modal-label">Current password</label>
+            <input id="current-password" type="password" class="input-dark" required />
+          </div>
+          <div>
+            <label for="new-password" class="modal-label">New password</label>
+            <input id="new-password" type="password" class="input-dark" minlength="6" required />
+          </div>
+          <button type="submit" class="btn-primary">Update password</button>
+        </form>
       </div>
-      <div id="schedules-empty" class="hidden text-center py-12 border border-dashed border-white/20 rounded-3xl text-slate-300">
-        <i data-feather="cloud-off" class="mx-auto mb-4 h-10 w-10"></i>
-        <p>No schedules yet. Save one from the builder to see it here.</p>
+
+      <div class="bg-white/10 border border-white/10 rounded-3xl shadow-xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-lg font-semibold text-white">Security notes</h2>
+          <i data-feather="shield" class="h-5 w-5 text-indigo-300"></i>
+        </div>
+        <ul class="list-disc pl-6 space-y-2 text-sm text-slate-300">
+          <li>UniTime never stores plain-text passwords. All credentials are hashed on the server.</li>
+          <li>If you suspect unusual activity, change your password and reach out to support.</li>
+          <li>Soon: manage trusted devices and enable two-factor authentication from here.</li>
+        </ul>
       </div>
-      <div id="schedule-grid" class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"></div>
-      <p id="schedules-message" class="mt-6 text-sm text-slate-400">Signed out users see a demo. Sign in to view your cloud backups.</p>
     </section>
   </main>
 

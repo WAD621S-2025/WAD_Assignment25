@@ -23,8 +23,8 @@
         </a>
         <div class="hidden md:flex items-center space-x-2 text-sm font-medium" id="nav-links">
           <a href="index.php" class="nav-link">Timetable</a>
-          <a href="schedules.html" class="nav-link">My Schedules</a>
-          <a href="account.html" class="nav-link">Account</a>
+          <a href="schedules.php" class="nav-link">My Schedules</a>
+          <a href="account.php" class="nav-link">Account</a>
         </div>
         <div class="flex items-center" id="nav-auth">
           <button id="login-btn" class="btn-primary">Login</button>

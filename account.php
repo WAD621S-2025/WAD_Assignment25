@@ -36,7 +36,6 @@
   <main class="relative z-10">
     <section class="max-w-3xl mx-auto px-6 py-12 text-center" data-aos="fade-up">
       <h1 class="text-4xl md:text-5xl font-bold text-white">Your UniTime account</h1>
-      <p class="mt-4 text-lg text-slate-300">Update your password, review recent cloud activity, and control sign-in sessions.</p>
     </section>
 
     <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-8" data-aos="fade-up" data-aos-delay="100">
@@ -84,7 +83,6 @@
         <ul class="list-disc pl-6 space-y-2 text-sm text-slate-300">
           <li>UniTime never stores plain-text passwords. All credentials are hashed on the server.</li>
           <li>If you suspect unusual activity, change your password and reach out to support.</li>
-          <li>Soon: manage trusted devices and enable two-factor authentication from here.</li>
         </ul>
       </div>
     </section>

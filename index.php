@@ -84,12 +84,12 @@
           </div>
           <div class="p-6">
             <div id="classes" class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3" data-default="true">
-              <div class="course-card" data-course="Math 101">Math 101</div>
-              <div class="course-card" data-course="Physics 201">Physics 201</div>
-              <div class="course-card" data-course="Chemistry 301">Chemistry 301</div>
-              <div class="course-card" data-course="History 101">History 101</div>
-              <div class="course-card" data-course="Computer Science 205">Computer Science 205</div>
-              <div class="course-card" data-course="Art History 150">Art History 150</div>
+              <div class="course-card" data-course="Programming">Programming</div>
+              <div class="course-card" data-course="Data Analytics">Data Analytics</div>
+              <div class="course-card" data-course="English">English</div>
+              <div class="course-card" data-course="Systems Analysis and Development">Systems Analysis and Development</div>
+              <div class="course-card" data-course="Data Networks">Data Networks</div>
+              <div class="course-card" data-course="Math">Math</div>
             </div>
           </div>
         </div>
@@ -98,13 +98,13 @@
       <aside class="space-y-6">
         <div class="bg-white/10 border border-white/10 rounded-3xl shadow-xl p-6">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-semibold text-white">Saved to Cloud</h3>
+            <h3 class="text-lg font-semibold text-white">Saved</h3>
             <button id="refresh-schedules-btn" class="btn-glass" title="Refresh schedules">
               <i data-feather="refresh-ccw" class="h-4 w-4"></i>
             </button>
           </div>
           <div id="saved-list" class="space-y-3"></div>
-          <p id="saved-empty" class="text-sm text-slate-400 hidden">No cloud schedules yet — save one to get started.</p>
+          <p id="saved-empty" class="text-sm text-slate-400 hidden">No schedules yet — save one to get started.</p>
         </div>
         <div class="bg-white/10 border border-white/10 rounded-3xl shadow-xl p-6">
           <h3 class="text-lg font-semibold text-white mb-3">Status</h3>

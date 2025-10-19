@@ -1,4 +1,203 @@
 :root {
+    color-scheme: light;
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --indigo: #6366f1;
+    --indigo-soft: rgba(99, 102, 241, 0.12);
+    --muted-border: rgba(2, 6, 23, 0.06);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    position: relative;
+    background: #ffffff;
+    color: #0f172a; /* slate-900 */
+}
+
+/* Hide the animated Vanta background when using a plain white theme */
+#vanta-bg {
+    display: none;
+}
+.nav-link {
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    color: rgba(15, 23, 42, 0.85);
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #0f172a;
+    background: var(--slate-100);
+}
+
+.nav-link.active {
+    color: #fff;
+    background: var(--indigo-soft);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--muted-border);
+    color: #0f172a;
+}
+
+.btn-muted {
+    background: var(--slate-100);
+    color: #0f172a;
+}
+
+.btn-muted:hover {
+    background: var(--slate-50);
+}
+
+.btn-glass {
+    background: rgba(255,255,255,0.8);
+    color: #0f172a;
+    border: 1px solid var(--muted-border);
+}
+
+.btn-glass:hover {
+    background: #ffffff;
+}
+
+.input-dark {
+    width: 100%;
+    padding: 0.55rem 0.85rem;
+    border-radius: 0.75rem;
+    background: var(--slate-50);
+    border: 1px solid var(--muted-border);
+    color: #0f172a;
+}
+
+.input-dark:focus {
+    outline: 2px solid rgba(99, 102, 241, 0.35);
+    outline-offset: 1px;
+}
+
+.course-card {
+    user-select: none;
+    background: #ffffff;
+    border: 1px solid var(--muted-border);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #0f172a;
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.course-card.dragging {
+    opacity: 0.95;
+    transform: scale(1.03);
+    box-shadow: 0 20px 45px -22px rgba(99, 102, 241, 0.18);
+}
+
+.timetable-header {
+    padding: 0.75rem;
+    border: 1px solid var(--muted-border);
+    background: var(--slate-50);
+    font-weight: 600;
+    color: #0f172a;
+    text-align: center;
+}
+
+#timetable td {
+    border: 1px solid var(--muted-border);
+    padding: 0.9rem 0.5rem;
+    min-width: 120px;
+    text-align: center;
+    color: #0f172a;
+    background: #ffffff;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+#timetable td:hover {
+    background: var(--slate-100);
+}
+
+#timetable td.filled {
+    background: rgba(79, 70, 229, 0.08);
+    border-color: rgba(129, 140, 248, 0.32);
+}
+
+.schedule-card {
+    border-radius: 1.25rem;
+    padding: 1rem;
+    border: 1px solid var(--muted-border);
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.schedule-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(6px);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1;
+    margin: 4vh auto;
+    padding: 2.5rem 2rem;
+    max-width: 420px;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--muted-border);
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.06);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    background: transparent;
+    border: none;
+    color: rgba(15, 23, 42, 0.7);
+    cursor: pointer;
+}
+
+.modal-tab {
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    border: none;
+    background: transparent;
+    color: rgba(15, 23, 42, 0.7);
+    font-weight: 600;
+}
+
+.modal-tab.active {
+    background: rgba(99, 102, 241, 0.12);
+    color: #0f172a;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+    color: rgba(15, 23, 42, 0.85);
+}
+:root {
     color-scheme: dark;
     --slate-900: rgba(15, 23, 42, 0.88);
     --slate-800: rgba(30, 41, 59, 0.9);

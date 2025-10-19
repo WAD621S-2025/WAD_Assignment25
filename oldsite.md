@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Timetable</a>
+                    <a href="index.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Timetable</a>
                     <a href="schedules.html" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-700 bg-indigo-100">My Schedules</a>
                     <a href="account.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Account</a>
                 </div>
@@ -174,7 +174,7 @@
         </div>
     </div>
 
-    <!-- Login Modal (same as index.html) -->
+    <!-- Login Modal (same as index.php) -->
     <div id="login-modal" class="fixed z-50 inset-0 overflow-y-auto hidden">
         <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div class="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -252,7 +252,7 @@
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                  <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Timetable</a>
+                  <a href="index.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Timetable</a>
                     <a href="schedules.html" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-700 bg-indigo-100">My Schedules</a>
                     <a href="account.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Account</a>
                 </div>
@@ -409,7 +409,7 @@
           <span class="ml-2 text-xl font-bold text-gray-900">UniTime</span>
         </div>
         <div class="hidden md:flex md:items-center md:space-x-4">
-          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Timetable</a>
+          <a href="index.php" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Timetable</a>
           <a href="schedules.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">My Schedules</a>
           <a href="account.html" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-700 bg-indigo-100">Account</a>
         </div>
